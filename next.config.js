@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  env: {
-    storyblokApiToken: 'STORYBLOK_API_TOKEN',
-  },
+  swcMinify: true
 }
 
 module.exports = nextConfig
