@@ -21,7 +21,7 @@ export default function Home(props) {
         </h1>
         <p className="text-white text-lg text-center">
           Actualmente estamos realizando correcciones y mejoras<br />
-          en nuestra página web. Mientras estamos en ello, <a href='https://www.coches.net/concesionario/automovileslaherradura/' className='underline underline-offset-4 '> puedes ver nuestros coches pinchando este enlace.</a>
+          en nuestra página web. Mientras tanto, <a href='https://www.coches.net/concesionario/automovileslaherradura/' className='underline underline-offset-4 '> puedes ver nuestros coches pinchando aquí.</a>
         </p>
       </main>
       <footer className='footer m-4 row-span-1 h-[80px] gap-2 flex flex-col items-center justify-center'>
