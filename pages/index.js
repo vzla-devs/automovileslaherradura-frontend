@@ -17,11 +17,11 @@ export default function Home(props) {
       </header>
       <main className="bg-[#00378a] p-4 row-span-10 w-full h-full flex flex-col items-center justify-center">
         <h1 className="text-white text-xl font-bold">
-        { props.story ? props.story.name : 'My Site' }
+        EN MANTENIMIENTO
         </h1>
         <p className="text-white text-lg text-center">
-          Actualmente estamos realizando labores de mantenimiento <br />
-          y mejoras a nuestra página web.
+          Actualmente estamos realizando correcciones y mejoras<br />
+          en nuestra página web. Mientras estamos en ello, <a href='https://www.coches.net/concesionario/automovileslaherradura/' className='underline underline-offset-4 '> puedes ver nuestros coches pinchando este enlace.</a>
         </p>
       </main>
       <footer className='footer m-4 row-span-1 h-[80px] gap-2 flex flex-col items-center justify-center'>
@@ -35,10 +35,10 @@ export default function Home(props) {
         </div>
         <div className='flex items-center justify-center gap-2'>
           <p className="text-[#00378a] font-bold">
-            Teléfono:
+            Teléfono fijo:
           </p>
           <p className="text-[#00378a]">
-            603 55 26 56
+            928 04 88 14
           </p>
         </div>
         <div className='flex items-center justify-center gap-2'>
