@@ -55,7 +55,7 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps() {
+/*export async function getStaticProps() {
   let storyblokSlug = "home";
  
   let storyblokParameters = {
@@ -73,4 +73,4 @@ export async function getStaticProps() {
     },
     revalidate: 3600, // revalidate every hour
   };
-}
+}*/
