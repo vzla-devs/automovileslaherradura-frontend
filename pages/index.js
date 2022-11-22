@@ -17,7 +17,7 @@ export default function Home(props) {
       </header>
       <main className="bg-[#00378a] p-4 row-span-10 w-full h-full flex flex-col items-center justify-center">
         <h1 className="text-white text-xl font-bold">
-        EN MANTENIMIENTO
+        { props.story ? props.story.name : 'EN MANTENIMIENTO' }
         </h1>
         <p className="text-white text-lg text-center">
           Actualmente estamos realizando correcciones y mejoras<br />
@@ -55,7 +55,7 @@ export default function Home(props) {
 }
 
 
-/*export async function getStaticProps() {
+export async function getStaticProps() {
   let storyblokSlug = "home";
  
   let storyblokParameters = {
@@ -73,4 +73,4 @@ export default function Home(props) {
     },
     revalidate: 3600, // revalidate every hour
   };
-}*/
+}
