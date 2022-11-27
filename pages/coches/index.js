@@ -1,18 +1,20 @@
 import React from "react";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
+import { getStoryblokApi } from "@storyblok/react"
 
-const Cars = () => {
+const Cars = ({data}) => {
   return <Layout>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 overflow-auto">
     {
-        [1,2,3,4,5,6,7,8,9,10].map(car => (
+        data?.map(({ uuid, content, }) => (
             <Card
-            key={car}
-            brand='Audi'
-            model='A 4 2.7 Tdi Multitronic'
-            price={10800}
-            year={2022}
+            key={uuid}
+            brand={content.brand}
+            model={content.model}
+            price={Number(content.price)}
+            year={content.year}
+            image={content.images[0]?.filename}
         />
         ))
     }
@@ -20,5 +22,23 @@ const Cars = () => {
 
   </Layout>;
 };
+
+export async function getStaticProps() {
+  let storyblokParameters = {
+    version: "published", // or 'draft',
+    content_type: "vehicle"
+  };
+ 
+  const storyblokApi = getStoryblokApi();
+  
+  let { data } = await storyblokApi.get('cdn/stories', storyblokParameters);
+ 
+  return {
+    props: {
+      data: data?.stories || []
+    },
+    revalidate: 3600, // revalidate every hour
+  };
+}
 
 export default Cars;
