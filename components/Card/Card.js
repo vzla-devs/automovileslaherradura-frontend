@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ price, brand, model, year }) => {
+const Card = ({ price, brand, model, year, image }) => {
   return (
     <div className="flex justify-center relative cursor-pointer">
       <div className="rounded-lg shadow-lg bg-white max-w-[300px]">
         <Image
           className="rounded-t-lg hover:opacity-95"
-          src="https://www.shopingcar.es/components/com_vehiclemanager/photos/822866AB-DD7B-B9A0-D643-FA5ACD7A6E4C_AUDI%20Q2%20PLATA%20(6)_800_800.JPG"
+          src={image}
           height={200}
           width={300}
           alt="logo"
