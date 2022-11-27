@@ -3,7 +3,7 @@ import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import { getStoryblokApi } from "@storyblok/react"
 
-const Cars = ({data}) => {
+const Cars = ({ data }) => {
   return <Layout>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 overflow-auto">
     {
@@ -37,7 +37,7 @@ export async function getStaticProps() {
     props: {
       data: data?.stories || []
     },
-    revalidate: 3600, // revalidate every hour
+    // revalidate: 3600, // revalidate every hour
   };
 }
 
