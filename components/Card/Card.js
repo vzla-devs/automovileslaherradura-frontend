@@ -18,10 +18,10 @@ const Card = ({ price, brand, model, year, image }) => {
         <div className="p-4">
           <div className="flex justify-between items-end">
             <div className="text-gray-900 text-lg font-medium mb-2 w-[70%] text-start">
-              {`${brand} ${model}`}
+              {`${brand.toUpperCase()} ${model}`}
             </div>
             <div className="text-[#00378a] text-lg font-bold mb-2 w-[30%] text-end">
-              {`${price}€`}
+              { new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price) }
             </div>
           </div>
         </div>
