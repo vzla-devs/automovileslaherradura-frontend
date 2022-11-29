@@ -5,7 +5,7 @@ import { getStoryblokApi } from "@storyblok/react"
 
 const Cars = ({ data }) => {
   return <Layout>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 overflow-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 w-full">
     {
         data?.map(({ uuid, content, }) => (
             <Card
