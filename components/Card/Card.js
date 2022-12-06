@@ -18,9 +18,9 @@ const Card = ({ price, brand, model, year, image }) => {
           {year}
         </div>
         <div className="p-4">
-          <div className="flex flex-col">
+          <div className="grid grid-cols-1 grid-rows-2">
             <div className="text-gray-700 text-lg font-medium mb-2 text-start">
-              {`${brand.toUpperCase()} ${model}`}
+              <p className="truncate">{`${brand.toUpperCase()} ${model}`}</p>
             </div>
             <div className="text-[#00378a] text-lg font-bold mb-2 text-end">
               { new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(price) }
