@@ -1,44 +1,38 @@
 import React from "react";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
-import { getStoryblokApi } from "@storyblok/react"
+import Link from "next/link";
+import { useAppContext } from "../../context/state";
 
-const Cars = ({ data }) => {
+const Cars = () => {
+  const { data } = useAppContext()
   return <Layout>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 gap-4 w-full">
     {
-        data?.map(({ uuid, content, }) => (
-            <Card
+        data?.map(({ uuid, content }) => (
+          <Link
             key={uuid}
-            brand={content.brand}
-            model={content.model}
-            price={Number(content.price)}
-            year={content.year}
-            image={content.images[0]?.filename}
-        />
+            href={{
+              pathname: '/coches/detalle',
+              query: { uuid },
+            }}
+          >
+            <a>
+              <Card
+                key={uuid}
+                brand={content.brand}
+                model={content.model}
+                price={Number(content.price)}
+                year={content.year}
+                image={content.images[0]?.filename}
+              />
+            </a>
+          </Link>
         ))
     }
     </div>
 
   </Layout>;
 };
-
-export async function getStaticProps() {
-  let storyblokParameters = {
-    version: "published", // or 'draft',
-    content_type: "vehicle"
-  };
- 
-  const storyblokApi = getStoryblokApi();
-  
-  let { data } = await storyblokApi.get('cdn/stories', storyblokParameters);
- 
-  return {
-    props: {
-      data: data?.stories || []
-    },
-    revalidate: 600, // revalidate every 10 minutes
-  };
-}
 
 export default Cars;

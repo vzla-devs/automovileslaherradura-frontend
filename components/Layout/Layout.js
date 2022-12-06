@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Logo from "../../assets/logo.jpg"
 
@@ -7,12 +8,16 @@ const Layout = ({ children }) => {
     <div className="flex flex-col justify-between h-[100vh]">
       <header className="flex items-center justify-between w-full h-[80px] p-6 bg-white border border-b-1 shadow-lg border-b-[#00378a]">
         <div className="flex items-center gap-2">
-          <Image
+          <Link href="/coches">
+            <a>
+            <Image
             src={Logo}
             alt="logo"
             height={70}
             width={70}
           />
+            </a>
+          </Link>
           <p className="hidden md:block font-bold text-[#00378a]"> AUTOMOVILES LA HERRADURA </p>
         </div>
         <div className="bg-[#00378a] rounded-lg text-white p-1">

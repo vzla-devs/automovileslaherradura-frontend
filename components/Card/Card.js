@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 const Card = ({ price, brand, model, year, image }) => {
-  console.log(image)
   return (
     <div className="flex justify-center relative cursor-pointer">
       <div className="rounded-lg shadow-lg bg-white w-full">
