@@ -1,6 +1,5 @@
 import Logo from '../assets/logo.jpg'
 import Image from 'next/image'
-import { getStoryblokApi } from "@storyblok/react"
 
 export default function Home(props) {
   return (

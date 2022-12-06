@@ -4,6 +4,15 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['a.storyblok.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/coches',
+        permanent: true,
+      },
+    ]
   }
 }
 

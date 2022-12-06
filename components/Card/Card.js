@@ -19,7 +19,7 @@ const Card = ({ price, brand, model, year, image }) => {
         </div>
         <div className="p-4">
           <div className="flex flex-col">
-            <div className="text-gray-900 text-lg font-medium mb-2 text-start">
+            <div className="text-gray-700 text-lg font-medium mb-2 text-start">
               {`${brand.toUpperCase()} ${model}`}
             </div>
             <div className="text-[#00378a] text-lg font-bold mb-2 text-end">
