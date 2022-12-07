@@ -22,7 +22,6 @@ const Detail = () => {
           {
             car && car?.content?.images?.map(({ filename }, index) => (
               <div
-                // style={{ position: 'relative', width: '100%', height: '70vh' }}
                 key={index}
                 className={`carousel-item ${index === 0 ? 'active' : ''} relative float-left w-full`}>
                 <Image
