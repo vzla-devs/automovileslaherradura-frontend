@@ -16,20 +16,21 @@ const Detail = () => {
   return (
     <Layout>
      <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 h-full w-full">
-      <div className="flex flex-col w-full p-4">
+      <div className="flex flex-col justify-center items-center w-full p-4">
         <div id="carouselExampleCaptions" className="carousel slide relative" data-bs-ride="carousel">
           <div className="carousel-inner relative w-full overflow-hidden">
           {
             car && car?.content?.images?.map(({ filename }, index) => (
               <div
-                style={{ position: 'relative', width: '100%', height: '70vh' }}
+                // style={{ position: 'relative', width: '100%', height: '70vh' }}
                 key={index}
                 className={`carousel-item ${index === 0 ? 'active' : ''} relative float-left w-full`}>
                 <Image
                   className="block w-full"
                   src={filename}
-                  objectFit='cover'
-                  layout="fill"
+                  width="700"
+                  height="520"
+                  layout="intrinsic"
                   alt={index}
                 />
             </div>
@@ -56,7 +57,7 @@ const Detail = () => {
           </button>
       </div>
       </div>
-      <div className="p-4">
+      <div className="flex flex-col md:justify-center lg:justify-start p-4">
         <div className="grid grid-cols-2 p-2">
           <p className="capitalize text-gray-700 font-semibold text-lg"> {car?.content?.brand} {car?.content?.model} {car?.content?.year} </p>
           <p className="capitalize text-[#00378a] font-extrabold text-lg text-end"> { new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(car?.content?.price) } </p>
