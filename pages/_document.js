@@ -4,7 +4,9 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <link rel="shortcut icon" href="/static/favicon.ico" />
+      </Head>
       <body>
         <Main />
         <NextScript />
