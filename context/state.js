@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useLayoutEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { getStoryblokApi } from "@storyblok/react"
 
 const AppContext = createContext();
