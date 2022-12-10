@@ -20,10 +20,7 @@ const Cars = () => {
             <a>
               <Card
                 key={uuid}
-                brand={content.brand}
-                model={content.model}
-                price={Number(content.price)}
-                year={content.year}
+                {...content}
                 image={content.images[0]?.filename}
               />
             </a>

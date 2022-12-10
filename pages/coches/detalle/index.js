@@ -13,6 +13,7 @@ const Detail = () => {
   useEffect(() => {
     setCar(data.find((car) => (car.uuid === uuid)))
   }, [data, uuid])
+  console.log(car)
   return (
     <Layout>
      <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 h-full w-full">
@@ -55,9 +56,29 @@ const Detail = () => {
             <span className="visually-hidden">Next</span>
           </button>
       </div>
+      <div className="flex gap-2 text-gray-500 text-md w-full">
+            {
+              car?.content?.year &&
+                <p className="text-md">
+                 {car.content.year} |
+                </p>
+            }
+            {
+              car?.content?.mileage &&
+                <p className="text-md">
+                  {car.content.mileage} km 
+                </p>
+            }
+            {
+              car?.content?.fuelType &&
+                <p className="text-md">
+                 {`${car?.content?.mileage ? '|' : ''}`} {car.content.fuelType}
+                </p>
+            }
+        </div>
       </div>
       <div className="flex flex-col md:justify-center lg:justify-start p-4">
-        <div className="grid grid-cols-2 p-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 p-2">
           <p className="capitalize text-gray-700 font-semibold text-lg"> {car?.content?.brand} {car?.content?.model} {car?.content?.year} </p>
           <p className="capitalize text-[#00378a] font-extrabold text-lg text-end"> { new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(car?.content?.price) } </p>
         </div>
