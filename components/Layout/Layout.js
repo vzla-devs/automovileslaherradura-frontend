@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className="flex flex-col justify-between h-[100vh]">
       <header className="flex fixed z-10 items-center justify-between w-full h-[80px] p-6 bg-white border border-b-1 shadow-lg border-b-[#00378a]">
         <div className="flex items-center gap-2">
-          <Link href="/coches">
+          <Link href="/">
             <a>
             <Image
             src={Logo}
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
             </a>
           </address>
           <address className="bg-[#00378a] rounded-lg text-white p-2 flex">
-            <a href="tel:+603552656" className="flex ml-3 gap-2 cursor-pointer">
+            <a href="tel:+603552656" className="flex gap-2 cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
             </svg>
