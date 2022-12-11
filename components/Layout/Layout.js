@@ -6,7 +6,7 @@ import Logo from "../../assets/logo.jpg"
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col justify-between h-[100vh]">
-      <header className="flex fixed z-10 items-center justify-between w-full h-[80px] p-6 bg-white border border-b-1 shadow-lg border-b-[#00378a]">
+      <header className="flex fixed z-10 items-center justify-between w-full h-[80px] p-2 bg-white border border-b-1 shadow-lg border-b-[#00378a]">
         <div className="flex items-center gap-2">
           <Link href="/">
             <a>
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
           />
             </a>
           </Link>
-          <p className="font-bold text-md md:text-lg text-[#00378a]"> AUTOMOVILES LA HERRADURA </p>
+          <p className="font-bold text-md md:text-lg text-[#00378a]">AUTOMOVILES LA HERRADURA</p>
         </div>
         <div className="hidden md:visible md:flex gap-2">
           <address className="bg-[#00378a] rounded-lg text-white p-2 flex">
