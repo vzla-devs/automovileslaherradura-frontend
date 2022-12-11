@@ -12,13 +12,10 @@ const Cars = () => {
         data?.map(({ uuid, content }) => (
           <Link
             key={uuid}
-            href={{
-              pathname: `/coches/${uuid}`
-            }}
+            href={`/coches/${uuid}`}
           >
             <a>
               <Card
-                key={uuid}
                 {...content}
                 image={content.images[0]?.filename}
               />
