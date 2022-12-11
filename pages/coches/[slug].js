@@ -1,19 +1,18 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Layout from "../../../components/Layout";
+import Layout from "../../components/Layout";
 import { useRouter } from 'next/router'
-import { useAppContext } from "../../../context/state";
+import { useAppContext } from "../../context/state";
 
 const Detail = () => {
   const [car, setCar] = useState(null)
   const router = useRouter()
   const { data } = useAppContext()
-  const { uuid } = router.query
+  const { slug } = router.query
 
   useEffect(() => {
-    setCar(data.find((car) => (car.uuid === uuid)))
-  }, [data, uuid])
-  console.log(car)
+    setCar(data.find((car) => (car.uuid === slug)))
+  }, [data, slug])
   return (
     <Layout>
      <div className="grid grid-rows-1 grid-cols-1 md:grid-cols-2 h-full w-full">

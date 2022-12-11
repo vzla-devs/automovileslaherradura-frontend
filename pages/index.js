@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "../../components/Card";
-import Layout from "../../components/Layout";
+import Card from "../components/Card";
+import Layout from "../components/Layout";
 import Link from "next/link";
-import { useAppContext } from "../../context/state";
+import { useAppContext } from "../context/state";
 
 const Cars = () => {
   const { data } = useAppContext()
@@ -13,8 +13,7 @@ const Cars = () => {
           <Link
             key={uuid}
             href={{
-              pathname: '/coches/detalle',
-              query: { uuid },
+              pathname: `/coches/${uuid}`
             }}
           >
             <a>
