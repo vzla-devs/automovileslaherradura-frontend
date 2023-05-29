@@ -62,6 +62,9 @@ const Layout = ({ children }) => {
             <p className="underline">Teléfonos: </p>603 552 656 / 928 048 814
           </div>
         </div>
+        <div>
+          
+        </div>
       </footer>
     </div>
   );
