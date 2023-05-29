@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
             <p className="underline">Teléfonos: </p>603 552 656 / 928 048 814
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center justify-center w-2/4 h-full max-md:w-full max-md:mt-4">
           
         </div>
       </footer>
