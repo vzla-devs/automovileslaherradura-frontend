@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
               width={70}
             />
           </div>
-          <div>
+          <div className="flex flex-col items-center">
             <div className="text-white font-semibold">
               Automóviles la herradura
             </div>
