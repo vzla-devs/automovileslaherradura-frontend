@@ -62,14 +62,16 @@ const Layout = ({ children }) => {
               width={70}
             />
           </div>
-          <div className="text-white font-semibold">
-            Automóviles la herradura
-          </div>
-          <div className="text-white text-sm gap-2 font-semibold flex">
-            <p className="underline">Dirección: </p>C. Alfonso XIII, 178, 35210 Telde, Las Palmas
-          </div>
-          <div className="text-white text-sm gap-2 font-semibold flex">
-            <p className="underline">Teléfonos: </p>603 552 656 / 928 048 814
+          <div>
+            <div className="text-white font-semibold">
+              Automóviles la herradura
+            </div>
+            <div className="text-white text-sm gap-2 font-semibold flex">
+              <p className="underline">Dirección: </p>C. Alfonso XIII, 178, 35210 Telde, Las Palmas
+            </div>
+            <div className="text-white text-sm gap-2 font-semibold flex">
+              <p className="underline">Teléfonos: </p>603 552 656 / 928 048 814
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center w-2/4 h-full max-md:w-full max-md:mt-4">
