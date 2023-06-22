@@ -53,6 +53,15 @@ const Layout = ({ children }) => {
       </div>
       <footer className="w-full h-[150px] p-6 bg-[#00378a] flex justify-center">
         <div className="flex flex-col justify-center items-center">
+          <div>
+            <Image
+              src={LogoFooter}
+              alt="footer-logo"
+              layout="intrinsic"
+              height={70}
+              width={70}
+            />
+          </div>
           <div className="text-white font-semibold">
             Automóviles la herradura
           </div>
